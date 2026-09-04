@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10F36898-145F-46DE-8523-91D2D2F7B7B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vues</RootNamespace>
+    <AssemblyName>Vues</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GestionBibliothequeEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionBibliothequeEF.Designer.cs">
+      <DependentUpon>GestionBibliothequeEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionColis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionColis.Designer.cs">
+      <DependentUpon>GestionColis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionOuvrageEF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionOuvrageEF.Designer.cs">
+      <DependentUpon>GestionOuvrageEF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionProduitMDC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionProduitMDC.Designer.cs">
+      <DependentUpon>GestionProduitMDC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionProduits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionProduits.Designer.cs">
+      <DependentUpon>GestionProduits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDBibliothequeGr5.cs" />
+    <Compile Include="MenuBibliothequeFSEG2026.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBibliothequeFSEG2026.Designer.cs">
+      <DependentUpon>MenuBibliothequeFSEG2026.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GestionBibliothequeEF.resx">
+      <DependentUpon>GestionBibliothequeEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionColis.resx">
+      <DependentUpon>GestionColis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionOuvrageEF.resx">
+      <DependentUpon>GestionOuvrageEF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionProduitMDC.resx">
+      <DependentUpon>GestionProduitMDC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionProduits.resx">
+      <DependentUpon>GestionProduits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBibliothequeFSEG2026.resx">
+      <DependentUpon>MenuBibliothequeFSEG2026.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{a090cae8-2e17-46c1-850b-5d915dc3bb2d}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{968c55b4-d4d5-466a-b9f0-69b7cb90291e}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Metier\Metier.csproj">
+      <Project>{46b8799d-5dbd-484d-96d1-fa458d199e01}</Project>
+      <Name>Metier</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>
